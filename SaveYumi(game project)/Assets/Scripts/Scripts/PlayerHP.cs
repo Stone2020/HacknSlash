@@ -31,12 +31,14 @@ public class PlayerHP : MonoBehaviour
             {
                 if(Lives > 0)
                 {
+                
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     PlayerPrefs.SetInt("Lives", Lives - 1);
 
                 }
                 else
                 {
+                    PlayerPrefs.GetString("42");
                     SceneManager.LoadScene("GameOver");
                 }
                 
