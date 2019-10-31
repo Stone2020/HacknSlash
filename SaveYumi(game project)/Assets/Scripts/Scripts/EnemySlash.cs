@@ -9,7 +9,7 @@ public class EnemySlash : MonoBehaviour
     public float swordLifetime = 0.01f;
     public float swordDelay = 7.0f;
     float timer = 0;
-    public float shootTriggerDistance = 2.0f;
+    public float shootTriggerDistance = 1.0f;
 
     public Transform player;
 
@@ -26,8 +26,8 @@ public class EnemySlash : MonoBehaviour
 
             GameObject Enemybullet = Instantiate(prefab, transform.position, Quaternion.identity);
             shootDirection.Normalize();
-            Enemybullet.GetComponent<Rigidbody2D>().velocity = shootDirection * slashSpeed;
             Destroy(Enemybullet, swordLifetime);
+            
         }
 
 

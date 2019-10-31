@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuY : MonoBehaviour
 {
+    public int Lives = 5;
+
     public void LoadGame()
     {
         SceneManager.LoadScene("Level 1");

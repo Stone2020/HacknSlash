@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class PlayerHP : MonoBehaviour
 {
-    public int health = 10;
+    public int health = 5;
     public Text healthText;
     public Slider healthSlider;
     public Text livesText;
@@ -17,7 +17,7 @@ public class PlayerHP : MonoBehaviour
         healthSlider.maxValue = health;
         healthSlider.value = health;
         Lives = PlayerPrefs.GetInt("Lives");
-        livesText.text = "Lives" + Lives;
+        livesText.text = "Lives: " + Lives;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -38,8 +38,8 @@ public class PlayerHP : MonoBehaviour
                 }
                 else
                 {
-                    PlayerPrefs.GetString("42");
-                    SceneManager.LoadScene("GameOver");
+                    
+                    SceneManager.LoadScene("Game Over");
                 }
                 
             }

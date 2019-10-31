@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Gameover : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
-    public void LoadGame()
+ 
+    
+    public void MainMenu()
     {
-        SceneManager.LoadScene("topdown level");
+        SceneManager.LoadScene("Main Menu");
     }
 }
