@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerShoot : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class playerShoot : MonoBehaviour
     public float bulletLifetime = 1.0f;
     public float shootDelay = 0.5f;
     float timer = 0;
+    public float ammo = 10;
+    public Text ammotext;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        ammotext.text = "ammo: " + ammo;
         
     }
 
@@ -19,8 +23,10 @@ public class playerShoot : MonoBehaviour
     void Update()
     {
         
+
+
         timer += Time.deltaTime;
-        if (Input.GetButton("Fire1") && timer > shootDelay)
+        if (Input.GetButton("Fire2") && timer > shootDelay && ammo > 0)
         {
             timer = 0;
             GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
@@ -34,6 +40,23 @@ public class playerShoot : MonoBehaviour
             shootDirection.Normalize();
             bullet.GetComponent<Rigidbody2D>().velocity = shootDirection * shootSpeed;
             Destroy(bullet, bulletLifetime);
+            ammo--;
+            ammotext.text = "ammo: " + ammo;
+            if (ammo < 1);
+            
+
+        }
+
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "ammo")
+        {
+            ammo++;
+            ammotext.text = "ammo: " + ammo;
         }
     }
+
 }
+
