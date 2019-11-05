@@ -10,7 +10,10 @@ public class Enemyhealthswrd : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "sword")
+        {
             enemyHealth--;
+        }
+            
 
         if (enemyHealth < 1)
         {
