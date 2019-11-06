@@ -30,7 +30,8 @@ public class playerswordvariant: MonoBehaviour
             swordposition.x += x;
             swordposition.y += y;
             GameObject sword = Instantiate(prefab, swordposition , Quaternion.identity);
-
+            sword.transform.right = swordposition;
+            sword.transform.parent = gameObject.transform;
             Destroy(sword, sworddelay);
 
 
