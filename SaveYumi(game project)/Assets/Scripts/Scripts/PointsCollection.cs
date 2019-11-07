@@ -33,5 +33,9 @@ public class PointsCollection : MonoBehaviour
         }
 
     }
+    public void IncreasePoints()
+    {
+        pointCount++;
+    }
 
 }

@@ -16,7 +16,7 @@ public class Bosshealth : MonoBehaviour
         if (enemyHealth < 1)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene("Win");
+            SceneManager.LoadScene("Level 3");
         }
     }
 }

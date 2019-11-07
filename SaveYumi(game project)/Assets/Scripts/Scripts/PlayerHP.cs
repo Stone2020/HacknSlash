@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class PlayerHP : MonoBehaviour
 {
-    public int health = 5;
+    public int health = 20;
     public Text healthText;
     public Slider healthSlider;
     public Text livesText;
@@ -60,5 +60,15 @@ public class PlayerHP : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
+        if (collision.gameObject.tag == "health" && health < 20)
+        {
+            health++;
+            Destroy(collision.gameObject);
+            healthText.text = "HP: " + health;
+            healthSlider.value = health;
+        }
+
     }
+    
 }
+

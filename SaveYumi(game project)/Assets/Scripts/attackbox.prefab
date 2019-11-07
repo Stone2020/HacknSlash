@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7425824638299528346}
   - component: {fileID: 4468023711383221145}
   - component: {fileID: 2102959290223342587}
-  - component: {fileID: -5481335161794039214}
   - component: {fileID: -3300111332127878918}
   m_Layer: 10
   m_Name: attackbox
@@ -98,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.009972811, y: 0.16783619}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1.2186086, y: 0.49567235}
   m_EdgeRadius: 0
 --- !u!95 &4468023711383221145
 Animator:
@@ -142,19 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb1d4087036ebd489c6bd3c1e6e43f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-5481335161794039214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7425824638299528350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cbbbc2ee9540b34aa2fa3714ce89245, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!50 &-3300111332127878918
 Rigidbody2D:
   serializedVersion: 4

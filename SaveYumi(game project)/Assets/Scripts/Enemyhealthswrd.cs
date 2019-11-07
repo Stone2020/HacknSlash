@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemyhealthswrd : MonoBehaviour
 {
     public int enemyHealth = 2;
+    
+
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -13,11 +15,14 @@ public class Enemyhealthswrd : MonoBehaviour
         {
             enemyHealth--;
         }
-            
+
 
         if (enemyHealth < 1)
         {
             Destroy(gameObject);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PointsCollection>().IncreasePoints();
         }
     }
 }
+            
+    
