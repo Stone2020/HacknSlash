@@ -13732,7 +13732,7 @@ GameObject:
   - component: {fileID: 1772951793}
   - component: {fileID: 1772951799}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

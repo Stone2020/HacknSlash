@@ -23,6 +23,18 @@ public class Enemyhealthswrd : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<PointsCollection>().IncreasePoints();
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "projectile")
+            enemyHealth--;
+
+        if (enemyHealth < 1)
+        {
+            Destroy(gameObject);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PointsCollection>().IncreasePoints();
+        }
+    }
+
 }
             
     

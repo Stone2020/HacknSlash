@@ -272,14 +272,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'after   a   full   night   sleep   and   with   a  clear  head  our hero  
-    realized  how he was  wasting   his   life  on pointless  quests  .  he  got 
-    a   job  and  now   is a  multibillionaire.
-
-
-
-
-    C'
+  m_Text: 'after   a   full   nights  rest  our  hero  re,alized  he  was  wasting 
+    his   time  and so  he  decided  to  do  something  with  his  life  he  now 
+    lives  as  a successful  owner  of  many  regional  gas stations.  '
 --- !u!222 &453272560
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ TagManager:
   - playerbullet
   - projectile
   - health
+  - plus
+  - Biggun
+  - ammo
   layers:
   - Default
   - TransparentFX

@@ -13,29 +13,19 @@ public class PointsCollection : MonoBehaviour
     {
         if (collision.gameObject.tag == "plus")
         {
-            pointCount++;
+            pointCount += 50;
             coinText.text = "Points: " + pointCount;
             Destroy(collision.gameObject);
-            if (pointCount > 24)
-            {
-                SceneManager.LoadScene("Win2");
-            }
+           
 
         }
-        if (collision.gameObject.tag == "minus")
-        {
-            pointCount--;
-            Destroy(collision.gameObject);
-            if (pointCount < -10)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
-        }
+        
 
     }
     public void IncreasePoints()
     {
-        pointCount++;
+        pointCount += 100;
+        coinText.text = "Points: " + pointCount;
     }
 
 }

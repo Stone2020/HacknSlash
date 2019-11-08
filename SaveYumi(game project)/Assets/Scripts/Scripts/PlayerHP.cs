@@ -10,6 +10,7 @@ public class PlayerHP : MonoBehaviour
     public Slider healthSlider;
     public Text livesText;
     public int Lives;
+   
 
     private void Start()
     {
@@ -45,7 +46,30 @@ public class PlayerHP : MonoBehaviour
             }
 
         }
-        
+        if (collision.gameObject.tag == "Biggun")
+        {
+            health -= 5;
+            healthText.text = "HP: " + health;
+            healthSlider.value = health;
+            if (health < 1)
+            {
+                if (Lives > 0)
+                {
+
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    PlayerPrefs.SetInt("Lives", Lives - 1);
+
+                }
+                else
+                {
+
+                    SceneManager.LoadScene("Game Over");
+                }
+
+            }
+
+        }
+
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -69,6 +93,7 @@ public class PlayerHP : MonoBehaviour
         }
 
     }
+
     
 }
 
