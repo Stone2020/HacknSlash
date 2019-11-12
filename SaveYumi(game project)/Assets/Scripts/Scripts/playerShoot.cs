@@ -56,6 +56,7 @@ public class playerShoot : MonoBehaviour
             ammo++;
             ammotext.text = "ammo: " + ammo;
             Destroy(collision.gameObject);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PointsCollection>().IncreasePoints();
         }
     }
 

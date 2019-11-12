@@ -90,6 +90,7 @@ public class PlayerHP : MonoBehaviour
             Destroy(collision.gameObject);
             healthText.text = "HP: " + health;
             healthSlider.value = health;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PointsCollection>().IncreasePoints();
         }
 
     }

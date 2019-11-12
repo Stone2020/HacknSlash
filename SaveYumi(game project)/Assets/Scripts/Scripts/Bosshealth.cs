@@ -17,6 +17,7 @@ public class Bosshealth : MonoBehaviour
         {
             Destroy(gameObject);
             SceneManager.LoadScene("Level 3");
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PointsCollection>().IncreasePoints();
         }
     }
 }
