@@ -13,6 +13,11 @@ public class Bosshealth : MonoBehaviour
         if (collision.gameObject.tag == "projectile")
             enemyHealth--;
 
+        if (collision.gameObject.tag == "sword")
+        {
+            enemyHealth--;
+        }
+
         if (enemyHealth < 1)
         {
             Destroy(gameObject);
