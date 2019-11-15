@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Good Ending.unity
     guid: 00b98cc54f57c3042b3b03d8ff62fee1
+  - enabled: 1
+    path: Assets/Scenes/Activate.unity
+    guid: 67f03e177964ee44f99107349efb17b7
+  - enabled: 1
+    path: Assets/Scenes/You Win!.unity
+    guid: fbb871494d7fe544d828439fdefe6068
   m_configObjects: {}
