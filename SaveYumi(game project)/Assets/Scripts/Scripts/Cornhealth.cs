@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Bosshealth : MonoBehaviour
+public class Cornhealth : MonoBehaviour
 {
     public int enemyHealth = 2;
 
@@ -24,7 +24,7 @@ public class Bosshealth : MonoBehaviour
         if (enemyHealth < 1)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene("Level 3");
+            SceneManager.LoadScene("You Win!");
             GameObject.FindGameObjectWithTag("Player").GetComponent<PointsCollection>().IncreasePoints();
         }
     }
